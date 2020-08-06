@@ -60,7 +60,7 @@ const CATEGORIES_INTENT = `${CATEGORIES.map((category) => `${category}~${categor
 
 intent(`(show|what is|tell me|what's|what are|what're|read) (the|) (recent|latest|) $(N news|headlines) (in|about|on|) $(C~ ${CATEGORIES_INTENT})`,
   `(read|show|get|bring me|give me) (the|) (recent|latest) $(C~ ${CATEGORIES_INTENT}) $(N news|headlines)`, (p) => {
-    let NEWS_API_URL = `https://newsapi.org/v2/top-headlines?apiKey=${API_KEY}`
+    let NEWS_API_URL = `https://newsapi.org/v2/top-headlines?apiKey=${API_KEY}&country=us`
     
     if(p.C.value){
         NEWS_API_URL = `${NEWS_API_URL}&category=${p.C.value}`
@@ -77,7 +77,7 @@ intent(`(show|what is|tell me|what's|what are|what're|read) (the|) (recent|lates
         savedArticles = articles;
         
         p.play({ command: 'newHeadlines', articles });
-        p.play(`Here are the (latest|recent) articles on ${p.C.value}.`);
+        p.play(`Here are the (latest|recent) articles on ${p.C.value} in US.`);
         
     })
 })
