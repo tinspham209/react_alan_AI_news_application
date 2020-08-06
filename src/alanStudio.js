@@ -107,17 +107,16 @@ const confirmation = context(() => {
     })
 })
 
-intent('Open the article number $(number* (.*))', (p) => {
+intent('Open (the|) (article|) (number|) $(number* (.*))', (p) => {
     if(p.number.value){
         p.play({command: 'open', number: p.number.value, articles: savedArticles})
     }
 })
 
-intent('go back', (p) => {
+intent('(go|) back', (p) => {
     p.play('Sure, going back');
     p.play({ command: 'newHeadlines', articles: []})
 })
-
 
 
 
