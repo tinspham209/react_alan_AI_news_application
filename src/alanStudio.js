@@ -77,7 +77,13 @@ intent(`(show|what is|tell me|what's|what are|what're|read) (the|) (recent|lates
         savedArticles = articles;
         
         p.play({ command: 'newHeadlines', articles });
-        p.play(`Here are the (latest|recent) articles on ${p.C.value} in US.`);
+        
+        if(p.C.value){
+           p.play(`Here are the (latest|recent) articles on ${p.C.value} in US.`);
+        }else{
+           p.play(`Here are the (latest|recent) news`);
+        }
+        
         
     })
 })
