@@ -75,3 +75,5 @@ Bugs:
 ### Set up
 
 `npm install` and `npm start`
+
+- Replace: [API_KEY] and [alanKey]
