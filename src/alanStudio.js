@@ -51,7 +51,7 @@ intent('what\'s up with $(term* (.*))', (p) => {
         savedArticles = articles;
         
         p.play({ command: 'newHeadlines', articles });
-        p.play(`Here are the (latest|recent) articles on ${p.source.value}.`);
+        p.play(`Here are the (latest|recent) articles on ${p.term.value}.`);
         
         p.play('Would you like me to read the headlines?')
         p.then(confirmation);
