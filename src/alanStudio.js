@@ -107,7 +107,11 @@ const confirmation = context(() => {
     })
 })
 
-
+intent('Open the article number $(number* (.*))', (p) => {
+    if(p.number.value){
+        p.play({command: 'open', number: p.number.value, articles: savedArticles})
+    }
+})
 
 
 
