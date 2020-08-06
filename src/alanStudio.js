@@ -49,7 +49,7 @@ intent('what\'s up with $(term* (.*))', (p) => {
         savedArticles = articles;
         
         p.play({ command: 'newHeadlines', articles });
-        p.play(`Here are the (latest|recent) articles on ${p.source.values}.`);
+        p.play(`Here are the (latest|recent) articles on ${p.source.value}.`);
         
     })
 })
@@ -77,7 +77,7 @@ intent(`(show|what is|tell me|what's|what are|what're|read) (the|) (recent|lates
         savedArticles = articles;
         
         p.play({ command: 'newHeadlines', articles });
-        p.play(`Here are the (latest|recent) articles on ${p.C.values}.`);
+        p.play(`Here are the (latest|recent) articles on ${p.C.value}.`);
         
     })
 })
