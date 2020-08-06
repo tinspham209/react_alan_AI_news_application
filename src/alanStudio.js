@@ -24,7 +24,7 @@ intent('news from $(source* (.*))', (p) => {
         savedArticles = articles;
         
         p.play({ command: 'newHeadlines', articles });
-        p.play(`Here are the (latest|recent) ${p.source.values} news.`);
+        p.play(`Here are the (latest|recent) ${p.source.value} news.`);
 
         p.play('Would you like me to read the headlines?')
         p.then(confirmation);
