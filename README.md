@@ -31,15 +31,22 @@
   - Read news by yourself
   - Or By Alan AI Voice Assistant
 
+### Resources
+
+- https://alan.app
+- API news: https://newsapi.org/
+
 ### After this project
 
 I have improve for myself about
 
-- a
+- Fetch API with async await
+- Responsive, Grid, Grow with Material-UI
+- styles component with Material-UI
 
 I have understand about
 
-- a
+- using voice to get data from API
 
 Next step, Bugs:
 
