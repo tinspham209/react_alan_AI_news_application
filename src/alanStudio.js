@@ -29,4 +29,30 @@ intent('news from $(source* (.*))', (p) => {
     })
 })
 
+
+// News by Term
+intent('what\'s up with $(term* (.*))', (p) => {
+    let NEWS_API_URL = `https://newsapi.org/v2/everything?apiKey=${API_KEY}`
+    
+    if(p.term.value){
+        NEWS_API_URL = `${NEWS_API_URL}&q=${p.term.value}`
+    }
+    
+    api.request(NEWS_API_URL, (error, response, body) => {
+        const { articles } = JSON.parse(body);
+        
+        if(!articles.length){
+            p.play('Sorry, please try searching for something else.');
+            return;
+        }
+        
+        savedArticles = articles;
+        
+        p.play({ command: 'newHeadlines', articles });
+        p.play(`Here are the (latest|recent) articles on ${p.source.values}.`);
+        
+    })
+})
+
+
 */
