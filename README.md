@@ -41,8 +41,9 @@
 I have improve for myself about
 
 - Fetch API with async await
-- Responsive, Grid, Grow with Material-UI
-- styles component with Material-UI
+- Responsive, Grid, Grow with `Material-UI`
+- styles component with `Material-UI`
+- Write CSS with makeStyles - `Material-UI`
 
 I have understand about
 
