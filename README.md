@@ -18,7 +18,8 @@
 ### Deploy
 
 - Wire frame:
-  <img src="https://i.imgur.com/DHZwMT1.png" />
+
+<img src="https://i.imgur.com/DHZwMT1.png" />
 
 ### Function
 
