@@ -67,11 +67,11 @@ I have understand about
 - Opening the new URL by use Voice Assistant
 - Make casual conversation that we didn't set up in our original script
 
-Next step:
+### Next step:
 
 - Update API news that have news in Vietnam
 
-Bugs:
+### Bugs:
 
 - Deploy to surge.sh, but CAN'T use Alan Voice
   - `getUserMedia is not supported`
