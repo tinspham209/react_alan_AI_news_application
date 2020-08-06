@@ -25,7 +25,9 @@ intent('news from $(source* (.*))', (p) => {
         
         p.play({ command: 'newHeadlines', articles });
         p.play(`Here are the (latest|recent) ${p.source.values} news.`);
-        
+
+        p.play('Would you like me to read the headlines?')
+        p.then(confirmation);
     })
 })
 
@@ -51,6 +53,8 @@ intent('what\'s up with $(term* (.*))', (p) => {
         p.play({ command: 'newHeadlines', articles });
         p.play(`Here are the (latest|recent) articles on ${p.source.value}.`);
         
+        p.play('Would you like me to read the headlines?')
+        p.then(confirmation);
     })
 })
 
@@ -83,10 +87,26 @@ intent(`(show|what is|tell me|what's|what are|what're|read) (the|) (recent|lates
         }else{
            p.play(`Here are the (latest|recent) news`);
         }
-        
+ 
+        p.play('Would you like me to read the headlines?')
+        p.then(confirmation);
         
     })
 })
+
+const confirmation = context(() => {
+    intent('yes', async (p) => {
+        for(let i = 0; i < savedArticles.length; i++){
+            p.play({command: 'highlight', article: savedArticles[i]});
+            p.play(`${savedArticles[i].title}`);
+        }
+        
+    })
+    intent('no', (p) => {
+        p.play('Sure, sounds good to me.')
+    })
+})
+
 
 
 
