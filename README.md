@@ -74,6 +74,8 @@ Bugs:
 
 ### Set up
 
-`npm install` and `npm start`
-
-- Replace: [API_KEY] and [alanKey]
+- `npm install`
+- Replace: `[API_KEY]` and `[alanKey]`
+  - `API_KEY` is login in https://newsapi.org/
+  - `[alanKey]` is login in https://alan.app
+- `npm start`
