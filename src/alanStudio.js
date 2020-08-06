@@ -113,6 +113,11 @@ intent('Open the article number $(number* (.*))', (p) => {
     }
 })
 
+intent('go back', (p) => {
+    p.play('Sure, going back');
+    p.play({ command: 'newHeadlines', articles: []})
+})
+
 
 
 
