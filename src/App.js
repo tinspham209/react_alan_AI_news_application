@@ -22,12 +22,10 @@ function App() {
         } else if (command === "highlight") {
           setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);
         } else if (command === "open") {
-          console.log("number", number);
           const parsedNumber =
             number.length > 2
               ? wordsToNumbers(number, { fuzzy: true })
               : number;
-          console.log("parsedNumber", parsedNumber);
           const article = articles[parsedNumber - 1];
           if (parsedNumber > 20) {
             alanBtn().playText("Please try that again.");
